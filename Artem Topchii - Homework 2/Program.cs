@@ -4,7 +4,6 @@ namespace Artem_Topchii___Homework_2
 {
     class Program
     {
-
         static int CompareTwoNumbers(int a, int b)
         {
             if (a > b)
@@ -157,7 +156,6 @@ namespace Artem_Topchii___Homework_2
                     literalValue = "Nineteen";
                     break;
             }
-
             return literalValue;
         }
 
@@ -194,7 +192,6 @@ namespace Artem_Topchii___Homework_2
                     secondWord = " nine";
                     break;
             }
-
             return secondWord;
         }
 
@@ -228,7 +225,6 @@ namespace Artem_Topchii___Homework_2
                     firstWord = "Ninety";
                     break;
             }
-
             return firstWord;
         }
 

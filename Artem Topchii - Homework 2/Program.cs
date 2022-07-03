@@ -257,16 +257,6 @@ namespace Artem_Topchii___Homework_2
          //CAPITALIZATE NUMBER
 
             //Console.WriteLine(CapitalizateNumber(82));
-
-
-
-
-
-
-
-
-
-
         }
     }
 }

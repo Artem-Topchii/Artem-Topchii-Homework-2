@@ -123,6 +123,7 @@ namespace Artem_Topchii___Homework_2
         private static string GetWordFrom10To19(int number)
         {
             string literalValue = default;
+
             switch (number)
             {
                 case 10:
@@ -156,12 +157,14 @@ namespace Artem_Topchii___Homework_2
                     literalValue = "Nineteen";
                     break;
             }
+
             return literalValue;
         }
 
         private static string GetSecondDigit(int secondDigit)
         {
             string secondWord = default;
+
             switch (secondDigit)
             {
                 case 1:
@@ -192,12 +195,14 @@ namespace Artem_Topchii___Homework_2
                     secondWord = " nine";
                     break;
             }
+
             return secondWord;
         }
 
         private static string GetFirstDigit(int firstDigit)
         {
             string firstWord = default;
+
             switch (firstDigit)
             {
                 case 2:
@@ -225,6 +230,7 @@ namespace Artem_Topchii___Homework_2
                     firstWord = "Ninety";
                     break;
             }
+
             return firstWord;
         }
         static (int, int) SwapTwoValues(ref int a, ref int b)

@@ -233,6 +233,7 @@ namespace Artem_Topchii___Homework_2
 
             return firstWord;
         }
+
         static (int, int) SwapTwoValues(ref int a, ref int b)
         {
             int temp = a;
@@ -240,6 +241,7 @@ namespace Artem_Topchii___Homework_2
             b = temp;
             return (a, b);
         }
+
         static void Main()
         {
          //COMPARE TWO NUMBERS

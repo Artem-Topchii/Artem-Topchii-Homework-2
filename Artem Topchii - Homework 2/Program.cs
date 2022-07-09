@@ -7,6 +7,7 @@ namespace Artem_Topchii___Homework_2
         static int CompareTwoNumbers(int a, int b)
         {
             int result = default;
+
             if (a > b)
             {
                 result = a + b;
@@ -26,6 +27,7 @@ namespace Artem_Topchii___Homework_2
         static int DetermineQuater(int x, int y)
         {
             int result = default;
+
             if (x > 0 && y > 0)
             {
                 result = 1;
@@ -73,6 +75,7 @@ namespace Artem_Topchii___Homework_2
             float x1 = default;
             float x2 = default;
             float d = b * b - 4 * a * c;
+
             if (d > 0)
             {
                 x1 = (float)((-b + Math.Sqrt(d)) / (2 * a));

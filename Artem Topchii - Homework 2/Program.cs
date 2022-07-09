@@ -6,92 +6,88 @@ namespace Artem_Topchii___Homework_2
     {
         static int CompareTwoNumbers(int a, int b)
         {
+            int result = default;
             if (a > b)
             {
-                return a + b;
+                result = a + b;
             }
             else if (a == b)
             {
-                return a * b;
+                result = a * b;
             }
             else
             {
-                return a - b;
+                result = a - b;
             }
+
+            return result;
         }
 
         static int DetermineQuater(int x, int y)
         {
+            int result = default;
             if (x > 0 && y > 0)
             {
-                return 1;
+                result = 1;
             }
             else if (x < 0 && y < 0)
             {
-                return 3;
+                result = 3;
             }
             else if (x < 0 && y > 0)
             {
-                return 2;
+                result = 2;
             }
             else if (x > 0 && y < 0)
             {
-                return 4;
+                result = 4;
             }
             else
             {
-                return 0;
+                result = 0;
             }
+
+            return result;
         }
 
         static (int, int, int) SortAscending(int a, int b, int c)
         {
-            if (a >= b && a >= c && b >= c)
+            if (a > b)
             {
-                return (c, b, a);
+                SwapTwoValues(ref a, ref b);
             }
-            else if (a >= b && a >= c && b <= c)
+            if (a > c)
             {
-                return (b, c, a);
+                SwapTwoValues(ref a, ref c);
             }
-            else if (a <= b && a >= c && b >= c)
+            if (b > c)
             {
-                return (c, a, b);
+                SwapTwoValues(ref b, ref c);
             }
-            else if (a <= b && a <= c && b >= c)
-            {
-                return (a, c, b);
-            }
-            else if (a <= b && a <= c && b <= c)
-            {
-                return (a, b, c);
-            }
-            else
-            {
-                return (b, a, c);
-            }
+
+            return (a, b, c);
         }
 
         static (float, float) SolveQaudraticEquation(float a, float b, float c)
         {
+            float x1 = default;
+            float x2 = default;
             float d = b * b - 4 * a * c;
             if (d > 0)
             {
-                float x1 = (float)((-b + Math.Sqrt(d)) / (2 * a));
-                float x2 = (float)((-b - Math.Sqrt(d)) / (2 * a));
-
-                return (x1, x2);
+                x1 = (float)((-b + Math.Sqrt(d)) / (2 * a));
+                x2 = (float)((-b - Math.Sqrt(d)) / (2 * a));
             }
             else if (d == 0)
             {
-                float x1 = (float)(b / (2 * a));
-
-                return (x1, float.NaN);
+                x1 = x2 = (float)(-b / (2 * a));
             }
             else
             {
-                return (float.NaN, float.NaN);
+                x1 = x2 = float.NaN;
             }
+
+            return (x1, x2);
         }
 
         static string CapitalizateNumber(int number)
@@ -117,6 +113,7 @@ namespace Artem_Topchii___Homework_2
             {
                 literalValue = GetWordFrom10To19(number);
             }
+
             return literalValue;
         }
 
@@ -227,7 +224,13 @@ namespace Artem_Topchii___Homework_2
             }
             return firstWord;
         }
-
+        static (int, int) SwapTwoValues(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+            return (a, b);
+        }
         static void Main()
         {
          //COMPARE TWO NUMBERS
@@ -236,23 +239,23 @@ namespace Artem_Topchii___Homework_2
 
          //DETERMINE QUATER
 
-            //Console.WriteLine(DetermineQuater(0, -15));
+            //Console.WriteLine(DetermineQuater(5, 15));
 
          //SORT ASCENDING
 
-            //(int a, int b, int c) = SortAscending(20, -16, 10);
+            //(int a, int b, int c) = SortAscending(3, 4, 8);
 
-            //Console.WriteLine(a + " > " + b + " > " + c);
+            //Console.WriteLine(a + " <= " + b + " <= " + c);
 
-         //SORT ASCENDING
+         //SOLVE QAUDRATIC EQUATION
 
-            //(float x1, float x2) = SolveQaudraticEquation(4, 1, 1);
+            //(float x1, float x2) = SolveQaudraticEquation(4, 4, 1);
 
             //Console.WriteLine("X1 = " + x1 + " X2 = " + x2);
 
          //CAPITALIZATE NUMBER
 
-            //Console.WriteLine(CapitalizateNumber(82));
+            //Console.WriteLine(CapitalizateNumber(11));
         }
     }
 }
